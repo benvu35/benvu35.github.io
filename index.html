@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ben Vu</title>
+  <meta name="description" content="Personal website of Ben Vu.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>">
+  <style>
+    :root {
+      --bg: #fafaf9; --fg: #1c1917; --muted: #57534e; --accent: #b45309; --line: #e7e5e4;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #161412; --fg: #f5f5f4; --muted: #a8a29e; --accent: #f59e0b; --line: #292524; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg);
+      font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+    }
+    main { max-width: 640px; margin: 0 auto; padding: 72px 20px 48px; }
+    h1 { font-size: 2.2rem; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.02em; }
+    .tagline { color: var(--muted); margin: 0 0 32px; font-size: 1.1rem; }
+    h2 { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 40px 0 12px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+    li span { color: var(--muted); font-size: .92rem; display: block; }
+    .links { display: flex; gap: 20px; flex-wrap: wrap; }
+    footer { color: var(--muted); font-size: .85rem; margin-top: 56px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Hi, I'm Ben Vu.</h1>
+    <p class="tagline">Student, builder, and curious person. This is my little corner of the internet.</p>
+
+    <h2>About</h2>
+    <p>I'm interested in technology, building things, and learning in public. Replace this paragraph with a few sentences about who you are, what you study or work on, and what you're excited about right now.</p>
+
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="#">Project one</a><span>A short description of what it is and why it's cool.</span></li>
+      <li><a href="#">Project two</a><span>Another thing you've built, written, or shipped.</span></li>
+      <li><a href="#">Project three</a><span>Swap these placeholders for your real work.</span></li>
+    </ul>
+
+    <h2>Elsewhere</h2>
+    <div class="links">
+      <a href="https://github.com/benvu35">GitHub</a>
+      <a href="https://www.linkedin.com/">LinkedIn</a>
+      <a href="mailto:hello@benvu.work">Email</a>
+    </div>
+
+    <footer>© <span id="y"></span> Ben Vu · benvu.work</footer>
+  </main>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
