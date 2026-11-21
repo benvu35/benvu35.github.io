@@ -4,54 +4,103 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ben Vu</title>
-  <meta name="description" content="Personal website of Ben Vu.">
+  <meta name="description" content="Ben Vu — Stanford junior from San Diego, interested in finance and sustainability.">
+  <meta property="og:title" content="Ben Vu">
+  <meta property="og:description" content="Stanford junior from San Diego, interested in finance and sustainability.">
+  <meta property="og:image" content="https://benvu.work/images/ben.jpg">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>">
   <style>
     :root {
-      --bg: #fafaf9; --fg: #1c1917; --muted: #57534e; --accent: #b45309; --line: #e7e5e4;
+      --bg: #fafaf9; --fg: #1c1917; --muted: #57534e; --accent: #0f766e; --line: #e7e5e4; --chip: #f0fdfa;
     }
     @media (prefers-color-scheme: dark) {
-      :root { --bg: #161412; --fg: #f5f5f4; --muted: #a8a29e; --accent: #f59e0b; --line: #292524; }
+      :root { --bg: #141413; --fg: #f5f5f4; --muted: #a8a29e; --accent: #2dd4bf; --line: #292524; --chip: #13302d; }
     }
     * { box-sizing: border-box; }
     body {
       margin: 0; background: var(--bg); color: var(--fg);
       font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
     }
-    main { max-width: 640px; margin: 0 auto; padding: 72px 20px 48px; }
-    h1 { font-size: 2.2rem; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.02em; }
-    .tagline { color: var(--muted); margin: 0 0 32px; font-size: 1.1rem; }
-    h2 { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 40px 0 12px; }
+    main { max-width: 720px; margin: 0 auto; padding: 64px 20px 48px; }
+    .hero { display: grid; grid-template-columns: 200px 1fr; gap: 36px; align-items: center; }
+    .hero img {
+      width: 200px; height: 250px; object-fit: cover; object-position: 50% 38%;
+      border-radius: 18px; display: block;
+    }
+    h1 { font-size: 2.3rem; line-height: 1.15; margin: 0 0 10px; letter-spacing: -0.02em; }
+    .tagline { color: var(--muted); margin: 0 0 16px; font-size: 1.08rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+    .chips li {
+      background: var(--chip); color: var(--accent); font-size: .85rem; font-weight: 500;
+      padding: 4px 12px; border-radius: 999px;
+    }
+    h2 { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 48px 0 14px; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    ul { list-style: none; padding: 0; margin: 0; }
-    li { padding: 10px 0; border-bottom: 1px solid var(--line); }
-    li span { color: var(--muted); font-size: .92rem; display: block; }
+    .role { padding: 16px 0; border-bottom: 1px solid var(--line); }
+    .role:last-child { border-bottom: 0; }
+    .role-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .role-head strong { font-weight: 600; }
+    .when { color: var(--muted); font-size: .9rem; white-space: nowrap; }
+    .title { color: var(--muted); font-size: .95rem; margin: 2px 0 6px; }
+    .role p { margin: 0; }
     .links { display: flex; gap: 20px; flex-wrap: wrap; }
     footer { color: var(--muted); font-size: .85rem; margin-top: 56px; }
+    @media (max-width: 600px) {
+      main { padding-top: 40px; }
+      .hero { grid-template-columns: 1fr; gap: 24px; }
+      .hero img { width: 160px; height: 200px; }
+      h1 { font-size: 2rem; }
+    }
   </style>
 </head>
 <body>
   <main>
-    <h1>Hi, I'm Ben Vu.</h1>
-    <p class="tagline">Student, builder, and curious person. This is my little corner of the internet.</p>
+    <section class="hero">
+      <img src="images/ben.jpg" alt="Portrait of Ben Vu" width="200" height="250">
+      <div>
+        <h1>Hi, I'm Ben Vu.</h1>
+        <p class="tagline">Junior at Stanford from San Diego, CA, working toward a career in finance with a focus on sustainability.</p>
+        <ul class="chips">
+          <li>Finance</li>
+          <li>Sustainability</li>
+          <li>Clean transportation</li>
+        </ul>
+      </div>
+    </section>
 
     <h2>About</h2>
-    <p>I'm interested in technology, building things, and learning in public. Replace this paragraph with a few sentences about who you are, what you study or work on, and what you're excited about right now.</p>
+    <p>I'm a junior at Stanford studying Science, Technology &amp; Society and Earth Systems. I grew up in San Diego, and I care about how capital and good business strategy can speed up the shift to a more sustainable economy. I want to build a career in finance and bring that perspective with me.</p>
+    <p>Outside of class I lead consulting projects for local nonprofits, work on sustainable transportation for students, and spend time on the court as a practice player for Stanford Women's Basketball.</p>
 
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="/australia/">Australia Diary</a><span>A cultural diary and travel blog from my quarter abroad in Australia: ten entries on history, Country, the coast, food, and mateship.</span></li>
-      <li><a href="#">Project one</a><span>A short description of what it is and why it's cool.</span></li>
-      <li><a href="#">Project two</a><span>Another thing you've built, written, or shipped.</span></li>
-      <li><a href="#">Project three</a><span>Swap these placeholders for your real work.</span></li>
-    </ul>
+    <h2>Experience</h2>
+    <div class="role">
+      <div class="role-head"><strong>Forum Mobility</strong><span class="when">Summer 2026</span></div>
+      <div class="title">Business Development Intern · San Francisco, CA</div>
+      <p>Built a national site-suitability model for heavy-duty EV charging that scored all 48 contiguous states on freight traffic, warehouse density, and grid access, producing 1,173 candidate sites. Extended it to the robotaxi market across the 36 largest U.S. metros, sizing demand at roughly 184 charging depots.</p>
+    </div>
+    <div class="role">
+      <div class="role-head"><strong>Stanford Rem &amp; Company</strong><span class="when">2024 – Present</span></div>
+      <div class="title">Project Director · previously Consultant</div>
+      <p>Lead teams of 4–5 consultants delivering pro bono strategy work for small businesses and nonprofits, serving as the primary client liaison.</p>
+    </div>
+    <div class="role">
+      <div class="role-head"><strong>Students for a Sustainable Stanford</strong><span class="when">2025 – Present</span></div>
+      <div class="title">Core Member, Transportation Team</div>
+      <p>Organize sustainable travel options for students during academic breaks, including campus shuttles and discounted Caltrain tickets.</p>
+    </div>
 
-    <h2>Elsewhere</h2>
+    <h2>Writing</h2>
+    <div class="role">
+      <div class="role-head"><strong><a href="/australia/">Australia Diary</a></strong></div>
+      <p>A cultural diary and travel blog from my quarter abroad in Australia: ten entries on history, Country, the coast, food, and mateship.</p>
+    </div>
+
+    <h2>Get in touch</h2>
     <div class="links">
-      <a href="https://github.com/benvu35">GitHub</a>
-      <a href="https://www.linkedin.com/in/benvu35/">LinkedIn</a>
       <a href="mailto:benvu@stanford.edu">Email</a>
+      <a href="https://www.linkedin.com/in/benvu35/">LinkedIn</a>
+      <a href="https://github.com/benvu35">GitHub</a>
     </div>
 
     <footer>© <span id="y"></span> Ben Vu · benvu.work</footer>
